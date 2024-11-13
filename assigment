@@ -1,0 +1,39 @@
+
+# Simple Inventory System
+
+# Inventory list
+inventory = []
+
+# Function to add items to inventory
+def add_item(item):
+    inventory.append(item)
+    print(f"{item} inventory mein add kar diya gaya hai.")
+
+# Function to display inventory
+def display_inventory():
+    if inventory:
+        print("Current Inventory:")
+        for item in inventory:
+            print(f"- {item}")
+    else:
+        print("Inventory khali hai.")
+
+# Main program
+while True:
+    print("\n1. Item add karein")
+    print("2. Inventory dekhein")
+    print("3. Exit")
+    
+    choice = input("Ek option chunein (1/2/3): ")
+    
+    if choice == '1':
+        item_name = input("Item ka naam daalein: ")
+        add_item(item_name)
+    elif choice == '2':
+        display_inventory()
+    elif choice == '3':
+        print("Program se exit ho rahe hain.")
+        break
+    else:
+        print("Invalid option, please phir se try karein.")
+
